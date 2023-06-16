@@ -4,7 +4,7 @@ import {
   Route,
   Routes
 } from "react-router-dom";
-import { Home, LiveDistance, HistoricalDistance,RequestStatus,Trip ,TripMap} from './pages'
+import { Home, LiveDistance, HistoricalDistance,RequestStatus,Trip} from './pages'
 import NavbarComponent from './components/NavbarComponent';
 const App = () => {
   return (
@@ -19,7 +19,6 @@ const App = () => {
         <Route path="/historic" element={<HistoricalDistance/>}/>
         <Route path='/status/:request_id?' element={<RequestStatus/>}/>
           <Route path='/trips' element={<Trip/>}/>
-          <Route path='/trip/:trip_id' element={<TripMap/>}/>
 
       </Routes>
 

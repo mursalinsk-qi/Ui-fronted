@@ -3,7 +3,6 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import axios from 'axios' 
 import Message from '../components/Message'
 import NewRequestId from '../components/NewRequestId'
-import DateTimePicker from 'react-datetime-picker';
 const HistoricalDistance = () => {
   const [trackingDeviceDetails, setTrackingDeviceDetails] = useState({
     source_id: '',

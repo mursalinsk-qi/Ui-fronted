@@ -16,13 +16,13 @@ const Trip = () => {
             return
         }
         try {
-            const {data}=await axios.get(`http://localhost/v1/data/trips/devices/${sourceId}`)
-            data && setTrips(data[0].trip_data)
-            console.log(trips)
-        } catch (error) {
-            if (error.response){
-                setError(error.response.data.message)
+            const {data}=await axios.get(`${process.env.REACT_APP_FMDP_API}/trips/devices/${sourceId}`)
+            if (data.length > 0){
+                setTrips(data[0].trip_data)
             }
+            console.log(data)
+        } catch (error) {
+            console.log(error)
         }
     }
     return (

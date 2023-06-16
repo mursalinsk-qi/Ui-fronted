@@ -38,11 +38,3 @@
     transform: rotate(360deg);
   }
 }
-+/*.qiMap {
-+  height: calc(100vh - 50px);
-+}
-+*/
-qiMap {
- height: 1000px;
- width: 1000px;
-}
