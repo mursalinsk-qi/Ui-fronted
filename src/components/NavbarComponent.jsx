@@ -1,12 +1,13 @@
 import React from 'react'
 import { Navbar, Container, Nav } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
+import {FaCar} from 'react-icons/fa'
 const NavbarComponent = () => {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="primary" variant="dark">
       <Container>
         <LinkContainer to="/">
-          <Navbar.Brand>GPS Distance Calculator</Navbar.Brand>
+          <Navbar.Brand>Trip <FaCar/></Navbar.Brand>
         </LinkContainer>
 
         <Nav className="ms-auto">

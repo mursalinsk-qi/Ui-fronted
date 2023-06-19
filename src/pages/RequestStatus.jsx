@@ -13,7 +13,7 @@ const RequestStatus = () => {
         setError('')
         setStatusResult(null)
         try {
-            const { data } = await axios.get(`/trips/status/${requestId}`)
+            const { data } = await axios.get(`${process.env.REACT_APP_DISTANCE_CALCULATION_HOST}/trips/status/${requestId}`)
             setStatusResult(data)
         } catch (error) {
             if (error.response) {

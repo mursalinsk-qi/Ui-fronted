@@ -21,7 +21,7 @@ const LiveDistance = () => {
         <tr className='table-info'>
           <th>Device ID</th>
           <th>Distance</th>
-          <th>Avarage Speed</th>
+          <th>Average Speed</th>
         </tr>
       </thead>
     )
@@ -45,8 +45,8 @@ const LiveDistance = () => {
                 distance &&
                 <tr className='table-dark' key={source_id}>
                   <td>{source_id}</td>
-                  <td>{distance && parseFloat(distance.toPrecision(2))} meter</td>
-                  <td>{avg_speed && avg_speed.toPrecision(4)}</td>
+                  <td>{distance && distance.toFixed(4)} meter</td>
+                  <td>{avg_speed && avg_speed.toFixed(4)} Km/h</td>
                 </tr>
               )
             })}

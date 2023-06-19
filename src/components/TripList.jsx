@@ -17,8 +17,8 @@ const TripList = ({ trips }) => {
         let localTime=null
         if (time){
             const date = new Date(time);
-            const options = { timeZone: 'UTC' };
-            localTime = date.toLocaleTimeString('en-US', options);
+            // const options = { timeZone: 'UTC' };
+            localTime = date.toLocaleTimeString('en-US');
         }
         return (
             <td>
@@ -31,22 +31,24 @@ const TripList = ({ trips }) => {
             <Container className='mt-3'>
                 <Table striped bordered hover size="sm" className='text-center'>
                     <thead>
-                        <tr className='table-info'>
+                        <tr className='table-info trip_table' >
                             <th>Trip ID</th>
                             <th>Status</th>
                             <th>Start Time</th>
                             <th>Start Position</th>
                             <th>End Time</th>
                             <th>End Position</th>
-                            <th>Max Speed</th>
-                            <th>Average Speed</th>
-                            <th>Total Distance</th>
+                            <th>Max Speed (KM/H)</th>
+                            <th>Average Speed (KM/H)</th>
+                            <th>Total Distance (meter)</th>
                         </tr>
                     </thead>
                     <tbody>
                         {trips.length > 0 && trips.map(trip => {
                             return (
-                                <tr className='table-dark' key={trip.trip_id}>
+                                <tr className='table-dark' key={trip.trip_id} style={
+                                    {fontSize:'12px'}
+                                }>
                                     <td>{trip.trip_id}</td>
                                     <td>{trip.status}</td>
                                     <Time time={trip.start_time} />

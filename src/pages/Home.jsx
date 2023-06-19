@@ -1,8 +1,10 @@
 import React from 'react'
-
 const Home = () => {
   return (
-    <div>Home Page</div>
+    <div>
+      <img src="./img/car.jpg" alt="" style={{height:'89vh',width:'100vw'}}/>
+    </div>
+
   )
 }
 

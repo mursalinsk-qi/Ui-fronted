@@ -20,7 +20,6 @@ const Trip = () => {
             if (data.length > 0){
                 setTrips(data[0].trip_data)
             }
-            console.log(data)
         } catch (error) {
             console.log(error)
         }
@@ -34,7 +33,7 @@ const Trip = () => {
                     <Form.Control type="text" name='source_id' onChange={(e)=>setSourceId(e.target.value)} />
                     <Button type='submit'variant="outline-dark" onClick={handleSubmit} className='mt-2'>Get Trips</Button>
                 </Form.Group>
-                {trips && trips.length >0 && <TripList trips={trips}/>}
+                {trips==null ? <h3>No trips found</h3> : <>{trips.length> 0 && <TripList trips={trips}/>}</>}
 
             </Form>
         </Container >
