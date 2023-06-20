@@ -16,7 +16,7 @@ const Trip = () => {
             return
         }
         try {
-            const {data}=await axios.get(`${process.env.REACT_APP_FMDP_API}/trips/devices/${sourceId}`)
+            const {data}=await axios.get(`${process.env.REACT_APP_FMDP_DATA_API}/trips/devices/${sourceId}`)
             if (data.length > 0){
                 setTrips(data[0].trip_data)
             }
